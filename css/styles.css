@@ -54,6 +54,17 @@ a:focus {
     background: transparent;
 }
 
+.title-framework {
+  font-size: 25px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.framework {
+  margin-left: 100px;
+  margin-bottom: -30px;
+}
+
 h3.filter-heading{
   margin-left: 25px;
   color: white;
@@ -138,7 +149,7 @@ h3.project-title{
 }
 
 #filter-language, #filter-field{
-  padding-left: 30px; 
+  padding-left: 30px;
 }
 
 .filter-language{
@@ -930,7 +941,7 @@ p.extend-details {
 .jprt-item {
   position: absolute;
   text-align: center;
-  
+
   -webkit-transition: width 1s ease, top 1s ease, left 1s ease, opacity 0.5s ease;
     -moz-transition:  width 1s ease, top 1s ease, left 1s ease, opacity 0.5s ease;
     -o-transition:  width 1s ease, top 1s ease, left 1s ease, opacity 0.5s ease;
@@ -948,7 +959,7 @@ p.extend-details {
   top: 0;
   left: 0;
   overflow-y: hidden;
-  
+
   -webkit-transition: height 1s ease, top 1s ease, left 1s ease, opacity 0.5s ease;
     -moz-transition:  height 1s ease, top 1s ease, left 1s ease, opacity 0.5s ease;
     -o-transition:  height 1s ease, top 1s ease, left 1s ease, opacity 0.5s ease;
@@ -962,12 +973,12 @@ p.extend-details {
 
 .jprt-hover {
   position: absolute;
-  
+
   opacity: 0;
   width: 100%;
   top: 0;
   left: 0;
-  
+
   -webkit-transition: width 1s ease, top 1s ease, left 1s ease, opacity 0.25s ease;
     -moz-transition:  width 1s ease, top 1s ease, left 1s ease, opacity 0.25s ease;
     -o-transition:  width 1s ease, top 1s ease, left 1s ease, opacity 0.25s ease;
@@ -1194,7 +1205,7 @@ h1.jprt-item-title {
   background: rgba(0,0,0,0.2);
   color: #fff;
 }
-.jprt-item-title { 
+.jprt-item-title {
   background: rgba(0,0,0,0.2);
   color: #fff;
 }
@@ -1725,7 +1736,7 @@ h1.jprt-item-title {
     font-size: 18px;
     padding-bottom: 18px;
     padding-top: 14px;
-  } 
+  }
 }
 /******* Media for max 992px *******/
 @media (max-width: 992px){
@@ -1904,7 +1915,7 @@ h1.jprt-item-title {
     font-size: 20px;
     margin-top: 5px;
     font-weight: 300;
-  }  
+  }
 }
 /******* Media for min 768px *******/
 @media (min-width: 768px){
@@ -2158,7 +2169,7 @@ header {
     padding-top: 50px;
 }
 #timeline{
-    background: #2E7D32; 
+    background: #2E7D32;
     padding-top: 100px;
     padding-bottom: 100px;
 }
