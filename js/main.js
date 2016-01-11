@@ -2,16 +2,21 @@ var fields = {
   "web" : "Web",
   "mobile" : "Mobile",
   "concurrent" : "Concurrent Programming",
-  "distributed" : "Distributed Systems",
   "structures" : "Data Structures",
   "design" : "Design Patterns",
   "graphics" : "3D Graphics",
-  "graph" : "Graph Theory"
+  "graph" : "Graph Theory",
+  "algorithms" : "Algorithms",
+  "databases" : "Databases"
 }
 var languages = {
   "android" : "Android",
   "javascript" : "Javascript",
+  "html" : "HTML / CSS",
   "java" : "Java",
+  "ruby" : "Ruby",
+  "rails" : "Rails",
+  "node" : "Node.js",
   "bootstrap" : "Bootstrap",
   "meteor" : "Meteor.js"
 }
@@ -22,32 +27,50 @@ $(document).ready(function (){
     "calculall": {
       name: "calculall",
       div: $("#calculall"),
-      fields: ["mobile", "concurrent", "design", "structures"],
-      languages: ["android", "java"]
+      fields: ["mobile", "design", "structures", "concurrent", "algorithms"],
+      languages: ["java", "android"]
     },
     "block-survival": {
       name: "block-survival",
       div: $("#block-survival"),
-      fields: ["concurrent", "design", "graphics", "structures"],
+      fields: ["graphics", "design", "structures", "concurrent"],
       languages: ["java"]
     },
     "fuser": {
       name: "fuser",
       div: $("#fuser"),
-      fields: ["mobile", "distributed"],
-      languages: ["android", "java"]
+      fields: ["mobile", "databases"],
+      languages: ["java", "android"]
     },
     "war": {
       name: "war",
       div: $("#war"),
-      fields: ["distributed", "structures", "graph"],
+      fields: ["web", "graph", "design", "structures"],
       languages: ["java"]
     },
     "organizer": {
       name: "organizer",
       div: $("#organizer"),
-      fields: ["web", "distributed"],
-      languages: ["javascript", "bootstrap", "meteor"]
+      fields: ["web", "databases"],
+      languages: ["javascript", "html", "meteor", "bootstrap"]
+    },
+    "muriqui" : {
+      name: "muriqui",
+      div: $("#muriqui"),
+      fields: ["web", "databases"],
+      languages: ["ruby", "javascript", "html", "rails", "bootstrap"]
+    },
+    "polarfeed" : {
+      name: "polarfeed",
+      div: $("#polarfeed"),
+      fields: ["web", "databases", "concurrent"],
+      languages: ["java", "android", "node"]
+    },
+    "3draw" : {
+      name: "3draw",
+      div: $("#3draw"),
+      fields: ["web", "graphics", "databases"],
+      languages: ["javascript", "html", "node", "bootstrap"]
     }
   };
 
@@ -72,7 +95,7 @@ $(document).ready(function (){
   for (var languageKey in languages){
     var language = languages[languageKey];
     $("#filter-language").append(
-      "<button id=\"" + languageKey + "-language\" class=\"filter-language\">"
+      "<button id=\"" + languageKey + "-language\" class=\"filter-language btn\">"
       + "<h3 class=\"filter-title\">" + language + "</h3>"
       + "</button>"
     );
@@ -96,7 +119,7 @@ $(document).ready(function (){
   for (var fieldKey in fields){
     var field = fields[fieldKey];
     $("#filter-field").append(
-      "<button id=\"" + fieldKey + "-field\" class=\"filter-field\">"
+      "<button id=\"" + fieldKey + "-field\" class=\"filter-field btn\">"
       + "<h3 class=\"filter-title\">" + field + "</h3>"
       + "</button>"
     );
