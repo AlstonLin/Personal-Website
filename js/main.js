@@ -95,7 +95,7 @@ $(document).ready(function (){
       name: "troll",
       div: $("#troll"),
       fields: ["mobile", "web", "databases"],
-      languages: ["java", "android"]
+      languages: ["java", "android", "html", "javascript", "node"]
     }
   };
 
