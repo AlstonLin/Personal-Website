@@ -105,6 +105,7 @@ $(document).ready(function (){
     for (var key in projects){
       var project = projects[key];
       project.div.show("slow");
+      addClearFix(projects);
     }
   });
 
@@ -113,6 +114,7 @@ $(document).ready(function (){
     for (var key in projects){
       var project = projects[key];
       project.div.show("slow");
+      addClearFix(projects);
     }
   });
 

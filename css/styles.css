@@ -383,10 +383,12 @@ p.extend-details {
   font-weight: 100;
   margin-bottom: 30px;
 }
+
 .text-main {
   font-size: 21px;
   font-weight: 400;
 }
+
 .separ {
   margin-top: 50px;
 }
@@ -2277,4 +2279,9 @@ header {
     color: white;
     text-align: center;
     font-size: 28px;
+}
+
+#other-skills {
+  font-size: 28px;
+  font-weight: 300;
 }
