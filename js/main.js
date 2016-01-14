@@ -164,7 +164,7 @@ $(document).ready(function (){
               project.div.hide("slow");
             } else{
               project.div.show("slow");
-              var project = projects[projectKey];
+              addClearFix(shown);
             }
           }
           addClearFix(shown);
