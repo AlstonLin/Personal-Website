@@ -15,6 +15,7 @@ var languages = {
   "html" : "HTML / CSS",
   "java" : "Java",
   "ruby" : "Ruby",
+  "cpp" : "C++",
   "rails" : "Rails",
   "node" : "Node.js",
   "bootstrap" : "Bootstrap",
@@ -33,7 +34,7 @@ $(document).ready(function (){
     "block-survival": {
       name: "block-survival",
       div: $("#block-survival"),
-      fields: ["graphics", "design", "structures", "concurrent"],
+      fields: ["graphics", "design", "algortihm", "structures", "concurrent"],
       languages: ["java"]
     },
     "fuser": {
@@ -45,7 +46,7 @@ $(document).ready(function (){
     "war": {
       name: "war",
       div: $("#war"),
-      fields: ["web", "graph", "design", "structures"],
+      fields: ["web", "graph", "design", "algorithm", "structures"],
       languages: ["java"]
     },
     "organizer": {
@@ -63,7 +64,7 @@ $(document).ready(function (){
     "polarfeed" : {
       name: "polarfeed",
       div: $("#polarfeed"),
-      fields: ["web", "databases", "concurrent"],
+      fields: ["mobile", "web", "databases", "concurrent"],
       languages: ["java", "android", "node"]
     },
     "3draw" : {
@@ -71,6 +72,18 @@ $(document).ready(function (){
       div: $("#3draw"),
       fields: ["web", "graphics", "databases"],
       languages: ["javascript", "html", "node", "bootstrap"]
+    },
+    "lost" : {
+      name: "lost",
+      div: $("#lost"),
+      fields: ["mobile", "graph", "design", "structures"],
+      languages: ["java", "android", "cpp"]
+    },
+    "troll" : {
+      name: "troll",
+      div: $("#troll"),
+      fields: ["mobile", "web", "databases"],
+      languages: ["android"]
     }
   };
 
@@ -113,7 +126,7 @@ $(document).ready(function (){
           }
         }
       }(languageKey)
-    ); 
+    );
   }
 
   for (var fieldKey in fields){
@@ -137,7 +150,7 @@ $(document).ready(function (){
           }
         }
       }(fieldKey)
-    ); 
+    );
   }
 
   //Adds the tags to each project
@@ -147,7 +160,7 @@ $(document).ready(function (){
        $("#" + project.name + "-tags-languages").append(
        "<div class=\"tag-language\">"
         + languages[project.languages[i]]
-        + "</div>"  
+        + "</div>"
       );
     }
     for (var i in project.fields){
