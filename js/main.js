@@ -8,18 +8,30 @@ var fields = {
   "graph" : "Graph Theory",
   "algorithms" : "Algorithms",
   "databases" : "Databases"
-}
+};
 var languages = {
   "android" : "Android",
   "javascript" : "Javascript",
   "html" : "HTML / CSS",
   "java" : "Java",
-  "ruby" : "Ruby",
   "cpp" : "C++",
-  "rails" : "Rails",
+  "rails" : "Ruby on Rails",
   "node" : "Node.js",
   "bootstrap" : "Bootstrap",
   "meteor" : "Meteor.js"
+};
+
+function addClearFix(shownProjects){
+  //Removes old
+  $('.clearfix').remove();
+  //Adds new
+  var i = 0;
+  for (var key in shownProjects){
+    if ((i + 1) % 2 == 0){
+      shownProjects[key].div.after('<div class="clearfix hidden-md-block"></div>');
+    }
+    i++;
+  }
 }
 
 $(document).ready(function (){
@@ -31,11 +43,35 @@ $(document).ready(function (){
       fields: ["mobile", "design", "structures", "concurrent", "algorithms"],
       languages: ["java", "android"]
     },
+    "muriqui" : {
+      name: "muriqui",
+      div: $("#muriqui"),
+      fields: ["web", "databases"],
+      languages: ["javascript", "html", "rails", "bootstrap"]
+    },
+    "polarfeed" : {
+      name: "polarfeed",
+      div: $("#polarfeed"),
+      fields: ["mobile", "web", "databases"],
+      languages: ["java", "android", "node"]
+    },
+    "war": {
+      name: "war",
+      div: $("#war"),
+      fields: ["graph", "design", "algorithms", "structures"],
+      languages: ["java"]
+    },
     "block-survival": {
       name: "block-survival",
       div: $("#block-survival"),
-      fields: ["graphics", "design", "algortihm", "structures", "concurrent"],
+      fields: ["graphics", "design", "algorithms", "structures", "concurrent"],
       languages: ["java"]
+    },
+    "3draw" : {
+      name: "3draw",
+      div: $("#3draw"),
+      fields: ["web", "graphics", "databases"],
+      languages: ["javascript", "html", "node", "bootstrap"]
     },
     "fuser": {
       name: "fuser",
@@ -43,35 +79,11 @@ $(document).ready(function (){
       fields: ["mobile", "databases"],
       languages: ["java", "android"]
     },
-    "war": {
-      name: "war",
-      div: $("#war"),
-      fields: ["web", "graph", "design", "algorithm", "structures"],
-      languages: ["java"]
-    },
     "organizer": {
       name: "organizer",
       div: $("#organizer"),
       fields: ["web", "databases"],
       languages: ["javascript", "html", "meteor", "bootstrap"]
-    },
-    "muriqui" : {
-      name: "muriqui",
-      div: $("#muriqui"),
-      fields: ["web", "databases"],
-      languages: ["ruby", "javascript", "html", "rails", "bootstrap"]
-    },
-    "polarfeed" : {
-      name: "polarfeed",
-      div: $("#polarfeed"),
-      fields: ["mobile", "web", "databases", "concurrent"],
-      languages: ["java", "android", "node"]
-    },
-    "3draw" : {
-      name: "3draw",
-      div: $("#3draw"),
-      fields: ["web", "graphics", "databases"],
-      languages: ["javascript", "html", "node", "bootstrap"]
     },
     "lost" : {
       name: "lost",
@@ -83,7 +95,7 @@ $(document).ready(function (){
       name: "troll",
       div: $("#troll"),
       fields: ["mobile", "web", "databases"],
-      languages: ["android"]
+      languages: ["java", "android"]
     }
   };
 
@@ -116,14 +128,17 @@ $(document).ready(function (){
     $("#" + languageKey + "-language").click(function(key){
         return function(e){
           e.preventDefault();
+          var shown = {};
           for (var projectKey in projects){
             var project = projects[projectKey];
             if (project.languages.indexOf(key) == -1){ //Does not have the tag
               project.div.hide("slow");
             } else{
               project.div.show("slow");
+              shown[projectKey] = project;
             }
           }
+          addClearFix(shown);
         }
       }(languageKey)
     );
@@ -140,14 +155,17 @@ $(document).ready(function (){
     $("#" + fieldKey + "-field").click(function(key){
         return function(e){
           e.preventDefault();
+          var shown = {};
           for (var projectKey in projects){
             var project = projects[projectKey];
             if (project.fields.indexOf(key) == -1){ //Does not have the tag
               project.div.hide("slow");
             } else{
               project.div.show("slow");
+              var project = projects[projectKey];
             }
           }
+          addClearFix(shown);
         }
       }(fieldKey)
     );
@@ -171,4 +189,6 @@ $(document).ready(function (){
       );
     }
   }
+
+  addClearFix(projects);
 });
