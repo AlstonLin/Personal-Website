@@ -1,12 +1,10 @@
 var fields = {
   "web" : "Web",
   "mobile" : "Mobile",
-  "concurrent" : "Concurrent Programming",
-  "structures" : "Data Structures",
   "design" : "Design Patterns",
   "graphics" : "3D Graphics",
   "graph" : "Graph Theory",
-  "algorithms" : "Algorithms",
+  "algorithms" : "Algorithms & Data Structures",
   "databases" : "Databases"
 };
 var languages = {
@@ -18,7 +16,10 @@ var languages = {
   "rails" : "Ruby on Rails",
   "node" : "Node.js",
   "bootstrap" : "Bootstrap",
-  "meteor" : "Meteor.js"
+  "meteor" : "Meteor.js",
+  "unity" : "Unity",
+  "csharp": "C Sharp",
+  "mongo": "MongoDB"
 };
 
 function addClearFix(shownProjects){
@@ -40,8 +41,32 @@ $(document).ready(function (){
     "calculall": {
       name: "calculall",
       div: $("#calculall"),
-      fields: ["mobile", "design", "structures", "concurrent", "algorithms"],
+      fields: ["mobile", "design", "algorithms"],
       languages: ["java", "android"]
+    },
+    "space": {
+      name: "space",
+      div: $("#space"),
+      fields: ["mobile", "graphics"],
+      languages: ["unity", "csharp", "android", "node", "javascript"]
+    },
+    "war": {
+      name: "war",
+      div: $("#war"),
+      fields: ["graph", "design", "algorithms"],
+      languages: ["java"]
+    },
+    "block-survival": {
+      name: "block-survival",
+      div: $("#block-survival"),
+      fields: ["graphics", "design", "algorithms"],
+      languages: ["java"]
+    },
+    "nutritrack": {
+      name: "nutritrack",
+      div: $("nutritrack"),
+      fields: ["web", "mobile", "databases"],
+      languages: ["java", "android", "node", "javascript", "mongo"]
     },
     "muriqui" : {
       name: "muriqui",
@@ -54,18 +79,6 @@ $(document).ready(function (){
       div: $("#polarfeed"),
       fields: ["mobile", "web", "databases"],
       languages: ["java", "android", "node"]
-    },
-    "war": {
-      name: "war",
-      div: $("#war"),
-      fields: ["graph", "design", "algorithms", "structures"],
-      languages: ["java"]
-    },
-    "block-survival": {
-      name: "block-survival",
-      div: $("#block-survival"),
-      fields: ["graphics", "design", "algorithms", "structures", "concurrent"],
-      languages: ["java"]
     },
     "3draw" : {
       name: "3draw",
@@ -88,7 +101,7 @@ $(document).ready(function (){
     "lost" : {
       name: "lost",
       div: $("#lost"),
-      fields: ["mobile", "graph", "design", "structures"],
+      fields: ["mobile", "graph", "design", "algorithms"],
       languages: ["java", "android", "cpp"]
     },
     "troll" : {

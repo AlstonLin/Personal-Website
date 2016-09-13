@@ -431,7 +431,9 @@ p.extend-details {
 .skill-green {
   background-color: #00CD98;
 }
-
+.skill-yellow {
+  background-color: #FFEB3B;
+}
 /* -----      PERCENT SKILLS     ------*/
 .skill-ten {
   width: 10%;
