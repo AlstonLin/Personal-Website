@@ -7,7 +7,6 @@
 	<meta name="robots" content="index, follow"/>
 	<title>Alston Lin</title>
 	<link rel="shortcut icon" href="icon.ico">
-
 	<!-- Google Font Roboto -->
 	<link href="http://fonts.googleapis.com/css?family=Roboto:500,400italic,100,300,700,100italic,300italic,400" rel="stylesheet" type="text/css">
 	<!-- Bootstrap 3.3.5 -->
@@ -40,7 +39,8 @@
 </head>
 
 <body>
-
+  <!-- Loading -->
+  <div class="se-pre-con"></div>
 	<!-- Header -->
 	<header class="parallax-window" data-parallax="scroll" data-image-src="img/bg.png">
 		<!-- Navigation -->
@@ -1096,7 +1096,8 @@
 	<!-- // Contact me -->
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 	<script src="js/type.min.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/sendemail.js"></script>
@@ -1106,7 +1107,12 @@
 	<script src="js/jquery.fancybox-media.js"></script>
 	<script src="js/jquery.fancybox-thumbs.js"></script>
 	<script>
-	$(document).ready(function(){
+	
+  $(window).load(function() {
+    // Animate loader off screen
+    $(".se-pre-con").fadeOut("slow");;
+  });
+  $(document).ready(function(){
 		$('a[href^="#"]').on('click',function (e) {
 		    e.preventDefault();
 		    var target = this.hash;
