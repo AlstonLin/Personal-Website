@@ -1,18 +1,17 @@
 var fields = {
   "web" : "Web",
+  "server" : "Server",
   "mobile" : "Mobile",
-  "design" : "Design Patterns",
   "graphics" : "3D Graphics",
   "graph" : "Graph Theory",
   "algorithms" : "Algorithms & Data Structures",
-  "databases" : "Databases"
+  "rest" : "RESTful APIs",
+  "socket" : "Web Sockets"
 };
 var languages = {
   "android" : "Android",
   "javascript" : "Javascript",
-  "html" : "HTML / CSS",
   "java" : "Java",
-  "cpp" : "C++",
   "rails" : "Ruby on Rails",
   "node" : "Node.js",
   "bootstrap" : "Bootstrap",
@@ -22,93 +21,98 @@ var languages = {
   "mongo": "MongoDB"
 };
 
-function addClearFix(shownProjects){
-  //Removes old
-  $('.clearfix').remove();
-  //Adds new
-  var i = 0;
-  for (var key in shownProjects){
-    if ((i + 1) % 2 == 0){
-      shownProjects[key].div.after('<div class="clearfix hidden-md-block"></div>');
-    }
-    i++;
-  }
-}
-
 $(document).ready(function (){
   //Defines the projects
   var projects = {
     "calculall": {
       name: "calculall",
       div: $("#calculall"),
-      fields: ["mobile", "design", "algorithms"],
+      fields: ["mobile", "algorithms"],
       languages: ["java", "android"]
+    },
+    "castle": {
+      name: "castle",
+      div: $("#castle"),
+      fields: ["mobile", "graphics"],
+      languages: ["unity", "csharp", "android"]
+    },
+    "quickvid": {
+      name: "quickvid",
+      div: $("#quickvid"),
+      fields: ["mobile", "server", "rest"],
+      languages: ["android", "java", "javascript", "node", "mongo"]
+    },
+    "beatmix": {
+      name: "beatmix",
+      div: $("#beatmix"),
+      fields: ["mobile", "server", "socket"],
+      languages: ["android", "java", "javascript", "node", "mongo"]
     },
     "space": {
       name: "space",
       div: $("#space"),
-      fields: ["mobile", "graphics"],
+      fields: ["mobile", "graphics", "server", "socket"],
       languages: ["unity", "csharp", "android", "node", "javascript"]
     },
     "war": {
       name: "war",
       div: $("#war"),
-      fields: ["graph", "design", "algorithms"],
+      fields: ["graph", "algorithms", "socket"],
       languages: ["java"]
     },
     "block-survival": {
       name: "block-survival",
       div: $("#block-survival"),
-      fields: ["graphics", "design", "algorithms"],
+      fields: ["graphics", "algorithms"],
       languages: ["java"]
     },
     "nutritrack": {
       name: "nutritrack",
-      div: $("nutritrack"),
-      fields: ["web", "mobile", "databases"],
+      div: $("#nutritrack"),
+      fields: ["mobile", "server", "rest"],
       languages: ["java", "android", "node", "javascript", "mongo"]
     },
     "muriqui" : {
       name: "muriqui",
       div: $("#muriqui"),
-      fields: ["web", "databases"],
-      languages: ["javascript", "html", "rails", "bootstrap"]
+      fields: ["web", "server", "rest"],
+      languages: ["rails", "javascript", "bootstrap"]
     },
     "polarfeed" : {
       name: "polarfeed",
       div: $("#polarfeed"),
-      fields: ["mobile", "web", "databases"],
-      languages: ["java", "android", "node"]
+      fields: ["mobile", "server", "rest"],
+      languages: ["java", "android", "node", "javascript"]
     },
     "3draw" : {
       name: "3draw",
       div: $("#3draw"),
-      fields: ["web", "graphics", "databases"],
-      languages: ["javascript", "html", "node", "bootstrap"]
+      fields: ["web", "graphics", "server", "socket"],
+      languages: ["javascript", "node", "javascript", "mongo", "bootstrap"]
     },
     "fuser": {
       name: "fuser",
       div: $("#fuser"),
-      fields: ["mobile", "databases"],
+      fields: ["mobile"],
       languages: ["java", "android"]
     },
     "organizer": {
       name: "organizer",
       div: $("#organizer"),
-      fields: ["web", "databases"],
-      languages: ["javascript", "html", "meteor", "bootstrap"]
+      fields: ["web", "server", "rest"],
+      languages: ["javascript", "meteor", "bootstrap"]
     },
     "lost" : {
       name: "lost",
       div: $("#lost"),
-      fields: ["mobile", "graph", "design", "algorithms"],
+      fields: ["mobile", "graph", "algorithms"],
       languages: ["java", "android", "cpp"]
     },
     "troll" : {
       name: "troll",
       div: $("#troll"),
       fields: ["mobile", "web", "databases"],
-      languages: ["java", "android", "html", "javascript", "node"]
+      languages: ["java", "android", "javascript", "node"]
     }
   };
 
@@ -118,7 +122,6 @@ $(document).ready(function (){
     for (var key in projects){
       var project = projects[key];
       project.div.show("slow");
-      addClearFix(projects);
     }
   });
 
@@ -127,7 +130,6 @@ $(document).ready(function (){
     for (var key in projects){
       var project = projects[key];
       project.div.show("slow");
-      addClearFix(projects);
     }
   });
 
@@ -153,7 +155,6 @@ $(document).ready(function (){
               shown[projectKey] = project;
             }
           }
-          addClearFix(shown);
         }
       }(languageKey)
     );
@@ -180,7 +181,6 @@ $(document).ready(function (){
               shown[projectKey] = project;
             }
           }
-          addClearFix(shown);
         }
       }(fieldKey)
     );
@@ -205,5 +205,4 @@ $(document).ready(function (){
     }
   }
 
-  addClearFix(projects);
 });
