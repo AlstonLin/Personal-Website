@@ -2,9 +2,10 @@ var fields = {
   "web" : "Web",
   "server" : "Server",
   "mobile" : "Mobile",
+  "ml": "Machine Learning",
   "graphics" : "3D Graphics",
   "graph" : "Graph Theory",
-  "algorithms" : "Algorithms & Data Structures",
+  "algorithms" : "Algorithms",
   "rest" : "RESTful APIs",
   "socket" : "Web Sockets"
 };
@@ -47,6 +48,12 @@ $(document).ready(function (){
       div: $("#quickvid"),
       fields: ["mobile", "server", "rest"],
       languages: ["android", "java", "javascript", "node", "mongo"]
+    },
+    "ihear": {
+      name: "ihear",
+      div: $("#ihear"),
+      fields: ["ml", "graphics", "server", "web"],
+      languages: ["javascript", "node", "unity", "csharp"]
     },
     "beatmix": {
       name: "beatmix",
