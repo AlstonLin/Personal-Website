@@ -24,6 +24,12 @@ var languages = {
 $(document).ready(function (){
   //Defines the projects
   var projects = {
+    "cliq": {
+      name: "cliq",
+      div: $("#cliq"),
+      fields: ["web", "server"],
+      languages: ["rails", "javascript", "bootstrap"]
+    },
     "calculall": {
       name: "calculall",
       div: $("#calculall"),
