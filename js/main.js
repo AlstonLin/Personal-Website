@@ -37,6 +37,12 @@ $(document).ready(function (){
       fields: ["mobile", "algorithms"],
       languages: ["java", "android"]
     },
+    "learning": {
+      name: "learning",
+      div: $("#learning"),
+      fields: ["ml", "mobile"],
+      languages: ["android", "java"]
+    },
     "castle": {
       name: "castle",
       div: $("#castle"),
