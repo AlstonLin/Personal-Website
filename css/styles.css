@@ -457,6 +457,9 @@ p.extend-details {
 .skill-green {
   background-color: #00CD98;
 }
+.skill-orange {
+  background-color: #FF5722;
+}
 .skill-yellow {
   background-color: #FFEB3B;
 }
