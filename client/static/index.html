@@ -1213,7 +1213,7 @@
 		</div>
 		<!-- Contact Form -->
 		<article class="container cntme">
-			<form method="post" action="/envato/mywall/one/send-email.php" id="ContactForm" name="ContactForm" class="validate-form">
+			<form action="/" method="post" id="contactForm" class="validate-form">
 				<div class="row">
 					<div class="form-group col-md-6 col-md-offset-3">
 					  <input type="text" class="form-control ct-name" name="name" id="name" placeholder="Your name" required>
@@ -1228,7 +1228,7 @@
 				<div class="row">
 					<div class="form-group col-md-6 col-md-offset-3">
 						<div id="successmsg"></div>
-						<button type="submit" name="button" id="button" class="btn btnc2 with-br btn-ctc"><span>Send Now</span></button>
+						<button type="submit" name="button" id="sendEmail" class="btn btnc2 with-br btn-ctc"><span>Send Now</span></button>
 					</div>
 				</div>
 			</form>
@@ -1265,7 +1265,7 @@
 		        window.location.hash = target;
 		    });
 		})
-	    $('.fancybox-thumbs').fancybox({
+	  $('.fancybox-thumbs').fancybox({
 			prevEffect : 'none',
 			nextEffect : 'none',
 			closeBtn  : false,

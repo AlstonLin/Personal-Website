@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/AlstonLin/Personal-Website#readme",
   "dependencies": {
+    "aws-sdk": "^2.57.0",
+    "body-parser": "^1.17.2",
     "express": "^4.15.3"
   }
 }
