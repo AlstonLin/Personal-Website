@@ -28,10 +28,13 @@ a:focus {
   outline: 0px auto -webkit-focus-ring-color;
   text-decoration: none;
 }
-.section{
+.section {
   overflow: hidden;
 }
-
+.g-recaptcha {
+  margin: 0 auto;
+  width: 304px;
+}
 .no-js #loader {
   display: none;
 }
@@ -1722,7 +1725,7 @@ h1.jprt-item-title {
   padding-left: 52px;
 }
 .btn-ctc {
-  margin-top: 50px;
+  margin-top: 15px;
   margin-right: auto;
   margin-bottom: 0px;
   margin-left: auto;
@@ -1739,7 +1742,7 @@ h1.jprt-item-title {
   width: 100%;
 }
 .btn-ctc:hover {
-  margin-top: 50px;
+  margin-top: 15px;
   margin-right: auto;
   margin-bottom: 0px;
   margin-left: auto;
@@ -2281,7 +2284,7 @@ header {
     background-image: url(../img/w_mail.png);
 }
 .btn-ctc {
-    margin-top: 50px;
+    margin-top: 15px;
     margin-right: auto;
     margin-bottom: 0;
     margin-left: auto;
@@ -2294,7 +2297,7 @@ header {
     font-weight: 300;
 }
 .btn-ctc:hover {
-    margin-top: 50px;
+    margin-top: 15px;
     margin-right: auto;
     margin-bottom: 0;
     margin-left: auto;
