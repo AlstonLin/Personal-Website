@@ -4,10 +4,8 @@ var fields = {
   "mobile" : "Mobile",
   "ml": "Machine Learning",
   "graphics" : "3D Graphics",
-  "graph" : "Graph Theory",
-  "algorithms" : "Algorithms",
-  "rest" : "RESTful APIs",
-  "socket" : "Web Sockets"
+  "socket" : "Web Sockets",
+  "docker": "Docker"
 };
 var languages = {
   "android" : "Android",
@@ -15,26 +13,52 @@ var languages = {
   "java" : "Java",
   "rails" : "Ruby on Rails",
   "node" : "Node.js",
-  "bootstrap" : "Bootstrap",
   "meteor" : "Meteor.js",
   "unity" : "Unity",
   "csharp": "C Sharp",
-  "mongo": "MongoDB"
+  "mongo": "MongoDB",
+  "python": "Python",
+  "react": "React.js",
+  "opencv": "OpenCV"
 };
 
 $(document).ready(function (){
   //Defines the projects
   var projects = {
+    "webveloper": {
+      name: "webveloper",
+      div: $("#webveloper"),
+      fields: ["web", "server", "docker"],
+      languages: ["javascript", "node", "react"]
+    },
+    "benign": {
+      name: "benign",
+      div: $("#benign"),
+      fields: ["mobile", "ml"],
+      languages: ["python", "opencv", "android", "java"]
+    },
+    "algotrainer": {
+      name: "algotrainer",
+      div: $("#algotrainer"),
+      fields: ["web", "server"],
+      languages: ["javascript", "node", "mongo"]
+    },
+    "vart": {
+      name: "vart",
+      div: $("#vart"),
+      fields: ["graphics", "server"],
+      languages: ["csharp"]
+    },
     "cliq": {
       name: "cliq",
       div: $("#cliq"),
       fields: ["web", "server"],
-      languages: ["rails", "javascript", "bootstrap"]
+      languages: ["rails", "javascript"]
     },
     "calculall": {
       name: "calculall",
       div: $("#calculall"),
-      fields: ["mobile", "algorithms"],
+      fields: ["mobile"],
       languages: ["java", "android"]
     },
     "learning": {
@@ -52,7 +76,7 @@ $(document).ready(function (){
     "quickvid": {
       name: "quickvid",
       div: $("#quickvid"),
-      fields: ["mobile", "server", "rest"],
+      fields: ["mobile", "server"],
       languages: ["android", "java", "javascript", "node", "mongo"]
     },
     "ihear": {
@@ -76,38 +100,38 @@ $(document).ready(function (){
     "war": {
       name: "war",
       div: $("#war"),
-      fields: ["graph", "algorithms", "socket"],
+      fields: ["socket"],
       languages: ["java"]
     },
     "block-survival": {
       name: "block-survival",
       div: $("#block-survival"),
-      fields: ["graphics", "algorithms"],
+      fields: ["graphics"],
       languages: ["java"]
     },
     "nutritrack": {
       name: "nutritrack",
       div: $("#nutritrack"),
-      fields: ["mobile", "server", "rest"],
+      fields: ["mobile", "server"],
       languages: ["java", "android", "node", "javascript", "mongo"]
     },
     "muriqui" : {
       name: "muriqui",
       div: $("#muriqui"),
-      fields: ["web", "server", "rest"],
-      languages: ["rails", "javascript", "bootstrap"]
+      fields: ["web", "server"],
+      languages: ["rails", "javascript"]
     },
     "polarfeed" : {
       name: "polarfeed",
       div: $("#polarfeed"),
-      fields: ["mobile", "server", "rest"],
+      fields: ["mobile", "server"],
       languages: ["java", "android", "node", "javascript"]
     },
     "3draw" : {
       name: "3draw",
       div: $("#3draw"),
       fields: ["web", "graphics", "server", "socket"],
-      languages: ["javascript", "node", "javascript", "mongo", "bootstrap"]
+      languages: ["javascript", "node", "javascript", "mongo"]
     },
     "fuser": {
       name: "fuser",
@@ -118,13 +142,13 @@ $(document).ready(function (){
     "organizer": {
       name: "organizer",
       div: $("#organizer"),
-      fields: ["web", "server", "rest"],
-      languages: ["javascript", "meteor", "bootstrap"]
+      fields: ["web", "server"],
+      languages: ["javascript", "meteor"]
     },
     "lost" : {
       name: "lost",
       div: $("#lost"),
-      fields: ["mobile", "graph", "algorithms"],
+      fields: ["mobile"],
       languages: ["java", "android", "cpp"]
     },
     "troll" : {
