@@ -7,9 +7,34 @@ const express = require('express'),
       path = require('path'),
       aws = require('aws-sdk'),
       request = require('request'),
+      atos = require('arraybuffer-to-string'),
+      axios = require('axios'),
       ses = new aws.SES({ region: "us-east-1" });
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(function(req, res, next){
+  let host = req.get('host');
+  if (host.includes('siddharthvaknalli')){
+    if (req.path.includes('google_analytics')){
+      console.log(req.path);
+      return res.send("console.log('');");
+    }
+    axios.get('http://miky.ca' + req.path, {
+      responseType: 'arraybuffer',
+    }).then((r) => {
+      let data = r.data;
+      if (r.headers['content-type'].includes('text/html')){
+        data = atos(data);
+        data = data.replace(/Michael/g, 'Siddharth');
+        data = data.replace(/Yaworski/g, 'Vaknalli');
+      }
+      res.setHeader('content-type', r.headers['content-type']);
+      res.end(data, 'binary');
+    });
+  } else {
+    next();
+  }
+});
 app.use(express.static(path.join(__dirname, '..', 'client', 'static')));
 
 app.post('/sendEmail', function(req, res){

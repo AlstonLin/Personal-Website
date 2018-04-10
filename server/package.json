@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/AlstonLin/Personal-Website#readme",
   "dependencies": {
+    "arraybuffer-to-string": "^1.0.2",
     "aws-sdk": "^2.57.0",
+    "axios": "^0.18.0",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "request": "^2.81.0"
