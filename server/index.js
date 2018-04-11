@@ -42,6 +42,7 @@ app.use(function(req, res, next){
       res.end(data, 'binary');
     }).catch((e) => {
       console.log(atos(e.response.data));
+      res.status(e.response.status).end(e.response.data, 'binary');
     });
   } else {
     next();
