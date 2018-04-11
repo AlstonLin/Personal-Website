@@ -27,6 +27,8 @@ app.use(function(req, res, next){
         data = atos(data);
         data = data.replace(/Michael/g, 'Siddharth');
         data = data.replace(/Yaworski/g, 'Vaknalli');
+        data = data.replace(/contact@mikeyaworski.com/g, 'contact@siddharthvaknalli.com');
+        data = data.replace(/mikeyaworski@hotmail.com/g, 'siddharthvaknalli@hotmail.com');
       }
       res.setHeader('content-type', r.headers['content-type']);
       res.end(data, 'binary');
