@@ -29,9 +29,19 @@ app.use(function(req, res, next){
         data = data.replace(/Yaworski/g, 'Vaknalli');
         data = data.replace(/contact@mikeyaworski.com/g, 'contact@siddharthvaknalli.com');
         data = data.replace(/mikeyaworski@hotmail.com/g, 'siddharthvaknalli@hotmail.com');
+        // Inject SEO meta tags to the head
+        data = data.replace(
+          /<head>\n/,
+          '<head>\n' +
+            '\t\t<meta name="description" content="Siddharth Vaknalli\'s Personal Website">\n' +
+            '\t\t<meta name="keywords" content="Siddharth,Vaknalli,Website">\n' +
+            '\t\t<meta name="author" content="Siddharth Vaknalli">\n'
+        );
       }
       res.setHeader('content-type', r.headers['content-type']);
       res.end(data, 'binary');
+    }).catch((e) => {
+      console.log(atos(e.response.data));
     });
   } else {
     next();
